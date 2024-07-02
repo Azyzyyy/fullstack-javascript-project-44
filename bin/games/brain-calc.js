@@ -3,7 +3,7 @@ import QuestionandGreeting from "../src/cli.js";
 import { game } from "../src/index.js";
 
 QuestionandGreeting();
-
+console.log(`What is the result of the expression?`);
 const descriptionGame = `What is the result of the expression?`;
 
 const gameRound = (minNum1, maxNum2, operators) => {
