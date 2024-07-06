@@ -1,1 +1,0 @@
-/home/azyzy-pin1939/fullstack-javascript-project-44/bin/games/brain-calc.js
