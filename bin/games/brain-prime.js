@@ -3,7 +3,7 @@ import { game } from "../../src/index.js";
 
 const descriptionGame = `Answer "yes" if given number is prime. Otherwise answer "no".`;
 
-const gameNumberIsPrime = () => {
+const brainPrime = () => {
     let number = Math.floor(Math.random() * 100);
     
     const primeNumber = (num) => {
@@ -25,4 +25,4 @@ const gameNumberIsPrime = () => {
     return [question, correctAnswer];
 };
 
-game(descriptionGame, gameNumberIsPrime);
+game(descriptionGame, brainPrime);

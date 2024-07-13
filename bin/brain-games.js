@@ -1,5 +1,3 @@
 #!/usr/bin/env node
 
-import QuestionandGreeting from "../src/cli.js";
-
-QuestionandGreeting();
+console.log('Welcome to the Brain Games!');

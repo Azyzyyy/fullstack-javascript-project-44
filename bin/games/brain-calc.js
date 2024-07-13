@@ -3,7 +3,7 @@ import { game } from "../../src/index.js";
 
 const descriptionGame = `What is the result of the expression?`;
 
-const gameRound = () => {
+const brainCalc = () => {
   const minNum1 = Math.floor(Math.random() * 100);
   const maxNum2 = Math.ceil(Math.random() * 100);
   const operators = ["-", "+", "*"];
@@ -29,4 +29,4 @@ const gameRound = () => {
   return [question, correctAnswer.toString()];
 };
 
-game(descriptionGame, gameRound);
+game(descriptionGame, brainCalc);

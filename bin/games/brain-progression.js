@@ -3,7 +3,7 @@ import { game } from "../../src/index.js";
 
 const descriptionGame = `What number is missing in the progression?`;
 
-const gameRound3 = () => {
+const brainProgression = () => {
   let start = Math.floor(Math.random() * 50);
   let difference = Math.floor(Math.random() * 10);
   const amountOfNum = 10;
@@ -26,4 +26,4 @@ const gameRound3 = () => {
   return [question, correctAnswer];
 };
 
-game(descriptionGame, gameRound3);
+game(descriptionGame, brainProgression);
