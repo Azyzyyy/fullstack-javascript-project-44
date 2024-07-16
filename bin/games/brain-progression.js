@@ -1,11 +1,11 @@
 #!/usr/bin/env node
-import { game } from "../../src/index.js";
+import game from '../../src/index.js';
 
-const descriptionGame = `What number is missing in the progression?`;
+const descriptionGame = 'What number is missing in the progression?';
 
 const brainProgression = () => {
-  let start = Math.floor(Math.random() * 50);
-  let difference = Math.floor(Math.random() * 10);
+  const start = Math.floor(Math.random() * 50);
+  const difference = Math.floor(Math.random() * 10);
   const amountOfNum = 10;
 
   const progression = [];
@@ -14,14 +14,14 @@ const brainProgression = () => {
   }
 
   const hiddenValue = () => {
-    let randomIndex = Math.floor(Math.random() * progression.length);
+    const randomIndex = Math.floor(Math.random() * progression.length);
     const hiddenNum = progression[randomIndex];
-    progression[randomIndex] = "..";
+    progression[randomIndex] = '..';
     return hiddenNum;
   };
 
   const correctAnswer = String(hiddenValue());
-  const question = progression.join(" ");
+  const question = progression.join(' ');
 
   return [question, correctAnswer];
 };
