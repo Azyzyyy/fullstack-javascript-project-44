@@ -4,16 +4,18 @@ import game from '../../src/index.js';
 const descriptionGame = 'Find the greatest common divisor of given numbers.';
 
 const brainGcd = () => {
-  let num1 = Math.floor(Math.random() * 100) + 1;
-  let num2 = Math.floor(Math.random() * 100) + 1;
+  const num1 = Math.floor(Math.random() * 100) + 1;
+  const num2 = Math.floor(Math.random() * 100) + 1;
 
   const gcd = (a, b) => {
-    while (b !== 0) {
-      let temp = b;
-      b = a % b;
-      a = temp;
+    let x = a;
+    let y = b;
+    while (y !== 0) {
+      const temp = y;
+      y = x % y;
+      x = temp;
     }
-    return a;
+    return x;
   };
 
   const valueGcd = gcd(num1, num2);

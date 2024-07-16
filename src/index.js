@@ -13,9 +13,7 @@ export default function game(descriptionGame, gameRound) {
     if (correctAnswer === answerUser.toLowerCase()) {
       console.log('Correct!');
     } else {
-      console.log(
-        `${answerUser} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${user}!`
-      );
+      console.log(`${answerUser} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${user}!`);
       return;
     }
   }

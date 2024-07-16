@@ -25,6 +25,8 @@ const brainCalc = () => {
       question = `Question: ${minNum1} * ${maxNum2}`;
       correctAnswer = minNum1 * maxNum2;
       break;
+    default:
+      break;
   }
 
   return [question, correctAnswer.toString()];

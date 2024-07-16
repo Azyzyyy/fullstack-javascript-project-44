@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 import game from '../../src/index.js';
 
-const descriptionGame =
-  'Answer "yes" if given number is prime. Otherwise answer "no".';
+const descriptionGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const brainPrime = () => {
   let number = Math.floor(Math.random() * 100);
