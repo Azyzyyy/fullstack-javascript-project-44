@@ -12,7 +12,7 @@ const calculation = (num1, num2, operator) => {
     return num1 * num2;
     default: throw new Error(`Invalid operator - ${operator}`)
   }
-}
+};
 
 const brainCalc = () => {
   const minNum1 = getRandomInRange(1, 100);

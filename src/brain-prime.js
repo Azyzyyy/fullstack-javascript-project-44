@@ -1,24 +1,24 @@
 #!/usr/bin/env node
-import getRandomInRange from './utils.js';
+import { getRandomInRange } from './utils.js';
+
+const isPrime = (number) => {
+  if (number < 2) {
+    return false;
+  }
+
+  for (let i = 2; i <= number / 2; i += 1) {
+    if (number % i === 0) {
+      return false;
+    }
+  }
+  return true;
+};
 
 const brainPrime = () => {
   const number = getRandomInRange(1, 100);
 
-  const primeNumber = (num) => {
-    if (num < 2) {
-      return 'no';
-    }
-
-    for (let i = 2; i <= num / 2; i += 1) {
-      if (num % i === 0) {
-        return 'no';
-      }
-    }
-    return 'yes';
-  };
-
   const question = `${number}`;
-  const correctAnswer = primeNumber(number);
+  const correctAnswer = isPrime(number) ? 'yes' : 'no';
 
   return [question, correctAnswer];
 };

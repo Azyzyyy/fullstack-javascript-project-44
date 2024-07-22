@@ -2,10 +2,8 @@
   "name": "@hexlet/code",
   "type": "module",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/Azyzyyy/fullstack-javascript-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Azyzyyy/fullstack-javascript-project-44/actions)",
-  "main": "index.js",
+  "description": "The project includes 5 games. The games are related to mathematical calculations and formulas.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint ."
   },
   "author": "Azyzy",
@@ -16,7 +14,7 @@
   },
   "bin": {
     "brain-games": "bin/brain-games.js",
-    "brain-even": "bin//games/brain-even.js",
+    "brain-even": "bin/games/brain-even.js",
     "brain-calc": "bin/games/brain-calc.js",
     "brain-gcd": "bin/games/brain-gcd.js",
     "brain-progression": "bin/games/brain-progression.js",

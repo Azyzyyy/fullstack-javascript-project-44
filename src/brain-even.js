@@ -1,12 +1,15 @@
 #!/usr/bin/env node
-import getRandomInRange from './utils.js';
+import { getRandomInRange } from './utils.js';
+
+const isEven = (number) => (number % 2 === 0);
+const check = (number) => {
+  const result = isEven(number) ? 'yes' : 'no';
+  return result;
+};
 
 const evenOrOdd = () => {
-
-  const isEven = (number) => (number % 2 === 0 ? 'yes' : 'no');
-
   const question = getRandomInRange(5, 85);
-  const correctAnswer = isEven(question);
+  const correctAnswer = check(question);
 
   return [question, correctAnswer];
 };
