@@ -4,7 +4,7 @@ import { getRandomInRange } from './utils.js';
 const gcd = (a, b) => {
   let x = a;
   let y = b;
-  while(y !== 0) {
+  while (y !== 0) {
     const temp = y;
     y = x % y;
     x = temp;

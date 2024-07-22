@@ -18,4 +18,4 @@ export default function game(descriptionGame, gameRound) {
     }
   }
   console.log(`Congratulations, ${user}!`);
-};
+}
