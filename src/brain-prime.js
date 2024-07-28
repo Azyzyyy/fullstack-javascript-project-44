@@ -25,4 +25,4 @@ const generateRound = () => {
   return [question, correctAnswer];
 };
 
-export default () => { game(description, generateRound) };
+export default () => game(description, generateRound);

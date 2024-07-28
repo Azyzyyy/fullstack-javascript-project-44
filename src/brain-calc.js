@@ -3,17 +3,6 @@ import game from './index.js';
 
 const description = 'What is the result of the expression?';
 
-const generateRound = () => {
-  const minNum1 = getRandomInRange(1, 100);
-  const maxNum2 = getRandomInRange(1, 100);
-  const operator = getRandomOperator();
-
-  const correctAnswer = calculation(minNum1, maxNum2, operator).toString();
-  const question = `${minNum1} ${operator} ${maxNum2}`;
-
-  return [question, correctAnswer];
-};
-
 const calculation = (num1, num2, operator) => {
   switch (operator) {
     case '-':
@@ -27,4 +16,15 @@ const calculation = (num1, num2, operator) => {
   }
 };
 
-export default () => { game(description, generateRound) };
+const generateRound = () => {
+  const minNum1 = getRandomInRange(1, 100);
+  const maxNum2 = getRandomInRange(1, 100);
+  const operator = getRandomOperator();
+
+  const correctAnswer = calculation(minNum1, maxNum2, operator).toString();
+  const question = `${minNum1} ${operator} ${maxNum2}`;
+
+  return [question, correctAnswer];
+};
+
+export default () => game(description, generateRound);
