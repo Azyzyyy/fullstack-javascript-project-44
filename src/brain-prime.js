@@ -1,5 +1,7 @@
-#!/usr/bin/env node
 import { getRandomInRange } from './utils.js';
+import game from './index.js';
+
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (number) => {
   if (number < 2) {
@@ -14,7 +16,7 @@ const isPrime = (number) => {
   return true;
 };
 
-const brainPrime = () => {
+const generateRound = () => {
   const number = getRandomInRange(1, 100);
 
   const question = `${number}`;
@@ -23,4 +25,4 @@ const brainPrime = () => {
   return [question, correctAnswer];
 };
 
-export default brainPrime;
+export default () => { game(description, generateRound) };

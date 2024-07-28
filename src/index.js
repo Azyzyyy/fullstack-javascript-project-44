@@ -1,12 +1,12 @@
 import readlineSync from 'readline-sync';
 import questionAndGreeting from './cli.js';
 
-export default function game(descriptionGame, gameRound) {
+export default function game(description, generateRound) {
   const user = questionAndGreeting();
-  console.log(descriptionGame);
+  console.log(description);
 
   for (let i = 0; i < 3; i += 1) {
-    const [question, correctAnswer] = gameRound();
+    const [question, correctAnswer] = generateRound();
     console.log(`Question: ${question}`);
     const answerUser = readlineSync.question('Your answer: ');
 

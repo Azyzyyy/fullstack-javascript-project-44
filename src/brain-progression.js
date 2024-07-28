@@ -1,5 +1,7 @@
-#!/usr/bin/env node
 import { getRandomInRange } from './utils.js';
+import game from './index.js';
+
+const description = 'What number is missing in the progression?';
 
 const generateProgression = (start, step, length) => {
   const progression = [];
@@ -17,7 +19,7 @@ const hiddenValue = (progression) => {
   return hiddenNum;
 };
 
-const brainProgression = () => {
+const generateRound = () => {
   const start = getRandomInRange(1, 50);
   const step = getRandomInRange(1, 10);
   const length = 10;
@@ -30,4 +32,4 @@ const brainProgression = () => {
   return [question, correctAnswer];
 };
 
-export default brainProgression;
+export default () => { game(description, generateRound) };

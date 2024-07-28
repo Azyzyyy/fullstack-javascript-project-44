@@ -1,5 +1,7 @@
-#!/usr/bin/env node
 import { getRandomInRange } from './utils.js';
+import game from './index.js';
+
+const description = 'Find the greatest common divisor of given numbers.';
 
 const gcd = (a, b) => {
   let x = a;
@@ -12,7 +14,7 @@ const gcd = (a, b) => {
   return x;
 };
 
-const brainGcd = () => {
+const generateRound = () => {
   const num1 = getRandomInRange(1, 100);
   const num2 = getRandomInRange(1, 100);
 
@@ -22,4 +24,4 @@ const brainGcd = () => {
   return [question, correctAnswer];
 };
 
-export default brainGcd;
+export default () => { game(description, generateRound) };
