@@ -13,7 +13,7 @@ const generateProgression = (start, step, length) => {
 
 const hiddenValue = (progression) => {
   const changeProgression = progression;
-  const randomIndex = Math.floor(Math.random() * changeProgression.length);
+  const randomIndex = getRandomInRange(0, changeProgression.length);
   const hiddenNum = progression[randomIndex];
   changeProgression[randomIndex] = '..';
   return hiddenNum;

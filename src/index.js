@@ -1,11 +1,12 @@
 import readlineSync from 'readline-sync';
 import questionAndGreeting from './cli.js';
+import { roundsCount } from './utils.js';
 
 export default function game(description, generateRound) {
   const user = questionAndGreeting();
   console.log(description);
 
-  for (let i = 0; i < 3; i += 1) {
+  for (let i = 0; i < roundsCount; i++) {
     const [question, correctAnswer] = generateRound();
     console.log(`Question: ${question}`);
     const answerUser = readlineSync.question('Your answer: ');
