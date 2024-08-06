@@ -20,7 +20,7 @@ const hiddenValue = (progression) => {
 };
 
 const generateRound = () => {
-  const start = getRandomInRange(1, 60);
+  const start = getRandomInRange(1, 50);
   const step = getRandomInRange(1, 10);
   const length = 10;
 
