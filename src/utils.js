@@ -4,5 +4,5 @@ const getRandomInRange = (min = 0, max = 100) => Math.floor(min + Math.random() 
 
 export {
   roundsCount,
-  getRandomInRange
+  getRandomInRange,
 };
