@@ -13,9 +13,10 @@ const generateProgression = (start, step, length) => {
 
 const hiddenValue = (progression) => {
   const changeProgression = progression;
-  const randomIndex = getRandomInRange(0, changeProgression.length);
+  const randomIndex = getRandomInRange(0, changeProgression.length - 1);
   const hiddenNum = progression[randomIndex];
   changeProgression[randomIndex] = '..';
+  console.log('changeProgression', changeProgression);
   return hiddenNum;
 };
 
@@ -27,6 +28,7 @@ const generateRound = () => {
   const progression = generateProgression(start, step, length);
 
   const correctAnswer = String(hiddenValue(progression));
+  console.log('correctAnswer', correctAnswer);
   const question = progression.join(' ');
 
   return [question, correctAnswer];
