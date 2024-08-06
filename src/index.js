@@ -6,7 +6,7 @@ export default function game(description, generateRound) {
   const user = questionAndGreeting();
   console.log(description);
 
-  for (let i = 0; i < roundsCount; i++) {
+  for (let i = 0; i < roundsCount; i += 1) {
     const [question, correctAnswer] = generateRound();
     console.log(`Question: ${question}`);
     const answerUser = readlineSync.question('Your answer: ');

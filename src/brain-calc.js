@@ -21,7 +21,6 @@ const getRandomOperator = () => {
   return operators[Math.floor(Math.random() * operators.length)];
 };
 
-
 const generateRound = () => {
   const minNum1 = getRandomInRange(1, 100);
   const maxNum2 = getRandomInRange(1, 100);
